@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orbit Browser</title>
+  <link rel="icon" href="favicon.ico">
+  <style>
+    :root { --bg: #0a0a0c; --bg2: #121214; --bg3: #1a1a1e; --text: #f4f4f5; --muted: #8a8a94; --accent: #6c5ce7; --accent2: #a78bfa; --border: #252529; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif; background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; max-width: 1200px; margin: 0 auto; }
+    .nav-logo img { width: 28px; border-radius: 6px; }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a { color: var(--muted); font-size: 14px; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-download { background: var(--accent); color: #fff !important; padding: 8px 20px; border-radius: 20px; font-size: 13px !important; }
+
+    .hero { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 100px auto 140px; padding: 0 48px; gap: 100px; }
+    .hero-text h1 { font-size: 56px; font-weight: 650; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 20px; }
+    .hero-text h1 em { font-style: normal; background: linear-gradient(135deg, var(--accent), #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero-text p { font-size: 17px; color: var(--muted); line-height: 1.8; margin-bottom: 36px; max-width: 440px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #fff; padding: 14px 36px; border-radius: 40px; font-size: 15px; font-weight: 500; transition: all 0.2s; }
+    .btn:hover { opacity: 0.9; box-shadow: 0 8px 32px rgba(108,92,231,0.3); }
+    .hero-img { flex: 1; max-width: 480px; }
+    .hero-img img { width: 100%; border-radius: 32px; }
+
+    .section { padding: 100px 48px; max-width: 1200px; margin: 0 auto; }
+    .section-header { margin-bottom: 60px; }
+    .section-header h2 { font-size: 32px; font-weight: 600; letter-spacing: -0.5px; margin-bottom: 12px; }
+    .section-header p { font-size: 15px; color: var(--muted); max-width: 480px; line-height: 1.7; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+    .card { background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; padding: 24px; transition: border-color 0.2s; }
+    .card:hover { border-color: rgba(108,92,231,0.25); }
+    .card-icon { font-size: 28px; margin-bottom: 12px; }
+    .card h3 { font-size: 15px; font-weight: 500; margin-bottom: 6px; }
+    .card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+    .cta-section { padding: 100px 48px; text-align: center; border-top: 1px solid var(--border); }
+    .cta-section h2 { font-size: 30px; font-weight: 600; margin-bottom: 12px; }
+    .cta-section p { color: var(--muted); font-size: 15px; margin-bottom: 28px; }
+
+    .footer { padding: 32px 48px; text-align: center; font-size: 13px; color: var(--muted); border-top: 1px solid var(--border); }
+
+    .alt { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 100px 0; }
+    .alt .section { padding: 0 48px; }
+
+    @media (max-width: 900px) {
+      .hero { flex-direction: column; text-align: center; gap: 48px; margin: 60px auto 80px; }
+      .hero-text p { max-width: 100%; }
+      .hero-img img { width: 240px; }
+      .grid-3 { grid-template-columns: 1fr 1fr; }
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .nav { padding: 14px 20px; }
+      .nav-links { gap: 16px; }
+      .hero { padding: 0 20px; }
+      .hero-text h1 { font-size: 36px; }
+      .section { padding: 60px 20px; }
+      .alt .section { padding: 0 20px; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .cta-section { padding: 60px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <a href="index.html" class="nav-logo"><img src="logo.png" alt="Orbit"></a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="download.html" class="nav-download" target="_blank">Download</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Browse fast.<br>Stay <em>private</em>.</h1>
+      <p>A clean, privacy-first browser with built-in ad blocking, extension support, and no clutter.</p>
+      <a href="download.html" class="btn" target="_blank">↓ Download for Windows</a>
+    </div>
+    <div class="hero-img"><img src="logo.png" alt="Orbit"></div>
+  </div>
+
+  <div class="section" id="features">
+    <div class="section-header">
+      <h2>Built-in privacy</h2>
+      <p>Orbit Shield blocks ads, trackers, fingerprinting, and mining scripts — no extensions required.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card"><div class="card-icon">🛡️</div><h3>Orbit Shield</h3><p>Blocks ads, trackers, fingerprinting, mining, and popups automatically.</p></div>
+      <div class="card"><div class="card-icon">🔒</div><h3>Privacy Controls</h3><p>Cookie management, clear browsing data, URL safety checking.</p></div>
+      <div class="card"><div class="card-icon">🌐</div><h3>8 Search Engines</h3><p>Google, DuckDuckGo, Bing, Brave, Yahoo, Ecosia, Startpage, Qwant.</p></div>
+    </div>
+  </div>
+
+  <div class="alt">
+    <div class="section">
+      <div class="section-header">
+        <h2>Extensions & tools</h2>
+        <p>Full Chrome extension support plus built-in tools for power users.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card"><div class="card-icon">🧩</div><h3>Chrome Extensions</h3><p>Install from Chrome Web Store, load unpacked, or from CRX/ZIP files.</p></div>
+        <div class="card"><div class="card-icon">📑</div><h3>Tab Management</h3><p>Session restore, multiple profiles, drag support, and keyboard shortcuts.</p></div>
+        <div class="card"><div class="card-icon">📥</div><h3>Download Manager</h3><p>Progress bar, speed, notifications, open file, show in folder, retry.</p></div>
+        <div class="card"><div class="card-icon">🔖</div><h3>Bookmarks & History</h3><p>Bookmark management with import/export, history search and filtering.</p></div>
+        <div class="card"><div class="card-icon">🔍</div><h3>Find in Page</h3><p>Ctrl+F search with result navigation and match counter.</p></div>
+        <div class="card"><div class="card-icon">⌨️</div><h3>Keyboard Shortcuts</h3><p>Ctrl+T, Ctrl+W, Ctrl+L, Ctrl+R, Ctrl+H, Ctrl+J, Ctrl+D, F12, and more.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <h2>Customization & developer</h2>
+      <p>Tweak the browser to your workflow with settings, themes, and dev tools.</p>
+    </div>
+    <div class="grid-2">
+      <div class="card"><div class="card-icon">⚙️</div><h3>Settings</h3><p>Startup behavior, UI language (EN/PT/ES), search engine, bookmarks bar, status bar, performance options.</p></div>
+      <div class="card"><div class="card-icon">🖥️</div><h3>Developer Tools</h3><p>Chrome DevTools (F12), system info, GPU info, network status, cache viewer, licenses.</p></div>
+    </div>
+  </div>
+
+  <div class="cta-section">
+    <h2>Download Orbit</h2>
+    <p>Free · Windows 64-bit · v0.1.2</p>
+    <a href="download.html" class="btn" target="_blank">↓ Download for Windows</a>
+  </div>
+
+  <div class="footer">Orbit Browser 0.1.2 — Built with ❤️ in Portugal</div>
+</body>
+</html>

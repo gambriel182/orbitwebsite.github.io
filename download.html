@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Orbit</title>
+  <link rel="icon" href="./favicon.ico">
+
+  <style>
+    :root{
+      --bg:#0a0a0c;
+      --bg2:#121214;
+      --bg3:#1a1a1e;
+      --text:#f4f4f5;
+      --muted:#8a8a94;
+      --accent:#6c5ce7;
+      --border:#252529;
+      --success:#22c55e;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      padding:24px;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    .card{
+      display:flex;
+      align-items:center;
+      gap:60px;
+      max-width:780px;
+      background:var(--bg2);
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:48px;
+    }
+
+    .card-img{
+      width:200px;
+      height:200px;
+      flex-shrink:0;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:var(--bg3);
+      border-radius:20px;
+      overflow:hidden;
+    }
+
+    .card-img img{
+      width:180px;
+      height:180px;
+      object-fit:contain;
+      display:block;
+    }
+
+    .card-text{
+      flex:1;
+    }
+
+    .badge{
+      display:inline-block;
+      background:rgba(108,92,231,.12);
+      color:#a78bfa;
+      font-size:12px;
+      padding:4px 12px;
+      border-radius:20px;
+      margin-bottom:12px;
+    }
+
+    h1{
+      font-size:28px;
+      margin-bottom:8px;
+      font-weight:600;
+    }
+
+    .sub{
+      color:var(--muted);
+      line-height:1.7;
+      margin-bottom:24px;
+      font-size:14px;
+    }
+
+    .btn{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      padding:14px 40px;
+      border-radius:40px;
+      transition:.2s;
+      font-weight:500;
+    }
+
+    .btn:hover{
+      opacity:.9;
+      box-shadow:0 8px 30px rgba(108,92,231,.25);
+    }
+
+    .btn small{
+      opacity:.7;
+      font-size:11px;
+      margin-top:3px;
+    }
+
+    .meta{
+      display:flex;
+      gap:20px;
+      margin-top:20px;
+      color:var(--muted);
+      font-size:13px;
+      flex-wrap:wrap;
+    }
+
+    .check{
+      color:var(--success);
+    }
+
+    .back{
+      display:inline-block;
+      margin-top:24px;
+      color:var(--muted);
+      text-decoration:none;
+      transition:.2s;
+      font-size:13px;
+    }
+
+    .back:hover{
+      color:var(--text);
+    }
+
+    @media(max-width:700px){
+
+      .card{
+        flex-direction:column;
+        text-align:center;
+        gap:30px;
+        padding:32px;
+      }
+
+      .card-img{
+        width:160px;
+        height:160px;
+      }
+
+      .card-img img{
+        width:140px;
+        height:140px;
+      }
+
+      .meta{
+        justify-content:center;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <div class="card-img">
+    <img
+      src="./mascote.png"
+      alt="Orbit Mascot"
+      onerror="this.onerror=null;this.src='./Mascote.png';"
+    >
+  </div>
+
+  <div class="card-text">
+
+    <div class="badge">v0.1.2</div>
+
+    <h1>Downloading Orbit</h1>
+
+    <p class="sub">
+      Your download should start automatically. If it doesn't, click the button below.
+    </p>
+
+    <a class="btn"
+       href="https://download943.mediafire.com/j5zzlgikhzxgv7x7-PhRN_9BMUXYKbg56NmErVTLJKpcAOaZ3kUsz0S0TrbMe1AYv6Ms2xd17vyU4g49ODlafgbDA1nq0x5mZZ-yb9Y-S-gqHIwv24lvoR7LPzvu94zt_9w0wPivseckzQRb_boF2VwByXT7yomFte4rx-yYOZirxw/e35p95kq5d5bkx2/OrbitSetup.exe"
+       target="_blank">
+
+      Download Orbit
+      <small>Windows 64-bit · 107 MB</small>
+
+    </a>
+
+    <div class="meta">
+      <span><span class="check">✓</span> v0.1.2</span>
+      <span><span class="check">✓</span> 107 MB</span>
+      <span><span class="check">✓</span> Windows 10+</span>
+    </div>
+
+    <a href="./index.html" class="back">← Back to homepage</a>
+
+  </div>
+
+</div>
+
+<script>
+setTimeout(() => {
+  window.location.href =
+    "https://download943.mediafire.com/j5zzlgikhzxgv7x7-PhRN_9BMUXYKbg56NmErVTLJKpcAOaZ3kUsz0S0TrbMe1AYv6Ms2xd17vyU4g49ODlafgbDA1nq0x5mZZ-yb9Y-S-gqHIwv24lvoR7LPzvu94zt_9w0wPivseckzQRb_boF2VwByXT7yomFte4rx-yYOZirxw/e35p95kq5d5bkx2/OrbitSetup.exe";
+}, 1500);
+</script>
+
+</body>
+</html>
